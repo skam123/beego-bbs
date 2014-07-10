@@ -1,0 +1,8 @@
+appname = beego-bbs
+httpport = 8080
+runmode = dev
+
+mysqluser = "root"
+mysqlpass = "password"
+mysqlurls = "127.0.0.1"
+mysqldb   = "beego-bbs"

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>{{.title}}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/application.css">
+		<script src="/static/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		{{range .moreStyles}}
+		<link rel="stylesheet" type="text/css" href="/static/{{.}}">
+		{{end}}
+		{{range .moreScripts}}
+		<script src="/public/{{.}}" type="text/javascript" charset="utf-8"></script>
+		{{end}}
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Beego BBS</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			{{template "flash.html" .}}
+			<div class="content">
+				{{.LayoutContent}}
+			</div>
+		</div>
+	</body>
+</html>
